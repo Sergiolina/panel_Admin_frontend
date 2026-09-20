@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+#cerrarSesion {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.bienvenida {
+    margin-bottom: 30px;
+}
+
+.admin-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.admin-card {
+    display: block;
+    padding: 25px;
+    background: white;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.admin-card h3 {
+    margin-top: 0;
+}

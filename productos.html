@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | Panel Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+
+        <h1>Administrar productos</h1>
+
+        <button id="cerrarSesion">
+            Cerrar sesión
+        </button>
+
+    </header>
+
+    <main class="admin-container">
+
+        <section class="productos-header">
+
+            <div>
+                <h2>Productos</h2>
+
+                <p>
+                    Crea y administra los productos de tu catálogo.
+                </p>
+            </div>
+
+            <button id="btnNuevoProducto">
+                ➕ Nuevo producto
+            </button>
+
+        </section>
+
+
+        <p id="mensaje"></p>
+
+
+        <section
+            id="formularioProducto"
+            class="formulario-producto"
+            hidden
+        >
+
+            <div class="formulario-header">
+
+                <h2 id="tituloFormulario">
+                    Nuevo producto
+                </h2>
+
+                <button
+                    type="button"
+                    id="btnCancelarProducto"
+                >
+                    Cancelar
+                </button>
+
+            </div>
+
+            <form id="productoForm">
+
+                <div>
+                    <label for="nombre">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="precio">
+                        Precio
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precio"
+                        name="precio"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label for="categoria">
+                        Categoría
+                    </label>
+
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required
+                    >
+                        <option value="">
+                            Selecciona una categoría
+                        </option>
+                    </select>
+
+                    <small>
+                        Solo aparecen las categorías creadas en el
+                        panel de categorías.
+                    </small>
+                </div>
+
+                <div>
+                    <label for="imagenUrl">
+                        URL de la imagen
+                    </label>
+
+                    <input
+                        type="url"
+                        id="imagenUrl"
+                        name="imagenUrl"
+                        placeholder="https://..."
+                    >
+
+                    <img
+                        id="vistaPreviaImagen"
+                        class="vista-previa"
+                        alt="Vista previa de la imagen"
+                        hidden
+                    >
+                </div>
+
+                <div>
+                    <label for="disponible" class="etiqueta-check">
+                        <input
+                            type="checkbox"
+                            id="disponible"
+                            name="disponible"
+                            checked
+                        >
+
+                        Producto disponible
+                    </label>
+                </div>
+
+                <button
+                    type="submit"
+                    id="btnGuardarProducto"
+                >
+                    Guardar producto
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="productos-lista">
+
+            <div id="lista-productos">
+                <!-- Los productos se cargarán aquí -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/admin.js"></script>
+    <script src="js/productos.js"></script>
+
+</body>
+
+</html>
