@@ -44,7 +44,7 @@ if (!respuesta.ok) {
 
                 mensaje.textContent = "Login correcto.";
 
-                window.location.href = "panel.html";
+                window.location.href = "https://sergiolina.github.io/panel_Admin_frontend/panel.html";
             }
             catch (error) {
                 console.error(error);
